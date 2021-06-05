@@ -9,7 +9,11 @@ start_time = time.time()
 
 input_data = open("input.json",)
 input_data_dict = json.load(input_data)
-to_match = input_data_dict["options"]
+# to_match = input_data_dict["options"]
+if "options" in input_data_dict:
+    to_match = input_data_dict["options"]
+else:
+    exit()
 
 audio = input_data_dict["audio"]
 wav_file = open("temp.wav", "wb")
