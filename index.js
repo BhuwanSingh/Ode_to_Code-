@@ -7,7 +7,7 @@ app.use(express.json());
 app.get("/api", (req, res) => {
     console.log("here");
     const a = req.body;
-    console.log(JSON.stringify(a));
+    // console.log(JSON.stringify(a));
 
     var ans = fs.readFileSync("output.json");
     let fans = JSON.parse(ans);
@@ -21,6 +21,7 @@ app.get("/api", (req, res) => {
     });
 });
 
-app.listen(3001, () => {
-    console.log("listining");
+let port = process.env.PORT || 3001;
+app.listen(port, () => {
+    console.log(`listining on port:${port}`);
 });
