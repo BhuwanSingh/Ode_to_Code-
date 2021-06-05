@@ -13,7 +13,7 @@ app.get("/api", (req, res) => {
     let fans = JSON.parse(ans);
     console.log("working-get");
     res.json({ fans });
-    fs.writeFileSync("input.txt", JSON.stringify(a), err => {
+    fs.writeFileSync("input.json", JSON.stringify(a), err => {
         if (err) {
             console.error(err);
             return;
