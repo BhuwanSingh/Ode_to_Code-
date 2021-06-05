@@ -1,5 +1,5 @@
 # Ode_to_Code-
-Team - Simple coders
+## Team - Simple coders
 
 #### 1.) Leader - Bhuwan Kumar Singh
 #### 2.) Member 1 - Isha Jain
