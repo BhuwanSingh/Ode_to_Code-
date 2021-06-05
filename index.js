@@ -1,28 +1,40 @@
-const express =  require("express");
+const express = require("express");
 const app = express();
 const fs = require("fs");
 
-var ans = fs.readFileSync('output.json');
-let fans = JSON.parse(ans);
-// console.log(fans);
+app.use(express.json());
 
-app.use( express.urlencoded({
-    extended : true
-}))
+app.get("/api", (req, res) => {
+    console.log("here");
+    const { a } = req.body;
+    console.log(a);
+    console.log(a['audio'])
+    // fs.writeFileSync("input.txt", JSON.stringify(a), err => {
+    //     if (err) {
+    //         console.error(err);
+    //         return;
+    //     }
+    // });
+    // app.get("/api", (req, res) => {
+        var ans = fs.readFileSync("output.json");
+        let fans = JSON.parse(ans);
+        console.log("working-get");
+        res.json({ fans });
+    // })
+});
 
-app.use(express.json())
-
-app.post('/api' , (req, res) => {
-    for(const a of req.body ){
-        console.log(a);
-    }
-})
-
-app.get( '/api' , function(req, res , next) {
-    console.log("working-get");
-    res.json({fans});
-})
-
-app.listen(3000 , () =>{
+app.listen(3001, () => {
     console.log("listining");
-})
+});
+
+// process.on('exit' , () => {
+//     console.log("exiting1");
+// })
+
+// process.on('uncaughtException', () => {
+//     console.log("exiting2");
+// })
+
+// process.on('SIGTERM', () => {
+//     console.log("exiting3");
+// })
