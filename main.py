@@ -1,7 +1,18 @@
 import speech_recognition as sr
 import librosa
 import json
+import base64
 import soundfile as sf
+
+input_data = open("input.json",)
+input_data_dict = json.load(input_data)
+to_match = input_data_dict["options"]
+
+audio = input_data_dict["audio"]
+wav_file = open("temp.wav", "wb")
+decode_string = base64.b64decode(audio)
+wav_file.write(decode_string)
+
 x, _ = librosa.load('./temp.wav', sr=16000)
 sf.write('tmp.wav', x, 16000)
 # wave.open('tmp.wav','r')
@@ -20,9 +31,7 @@ with sr.AudioFile(filename) as source:
     a = list(text.split(" "))
 
 
-input_data = open("input.json",)
-input_data_dict = json.load(input_data)
-to_match = input_data_dict["options"]
+
 # print(to_match)
 
 b = []
