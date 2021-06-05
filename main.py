@@ -4,6 +4,9 @@ import json
 import base64
 import soundfile as sf
 
+import time
+start_time = time.time()
+
 input_data = open("input.json",)
 input_data_dict = json.load(input_data)
 to_match = input_data_dict["options"]
@@ -50,4 +53,5 @@ f = open("output.json", "w+")
 f.write(json.dumps(k))
 f.close()
 
-# print(a)
+print(a)
+print("--- %s seconds ---" % (time.time() - start_time))
