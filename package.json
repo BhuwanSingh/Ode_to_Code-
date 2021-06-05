@@ -1,0 +1,22 @@
+{
+  "name": "ode_to_code-",
+  "version": "1.0.0",
+  "description": "speech-recog",
+  "main": "index.js",
+  "scripts": {
+    "test": "voice"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BhuwanSingh/Ode_to_Code-.git"
+  },
+  "author": "Bhuwan, Isha, Mayank",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BhuwanSingh/Ode_to_Code-/issues"
+  },
+  "homepage": "https://github.com/BhuwanSingh/Ode_to_Code-#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
