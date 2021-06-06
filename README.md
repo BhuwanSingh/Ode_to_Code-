@@ -19,5 +19,5 @@ For this purpose we used the python libraries like speech recognition,librosa,js
 It's a basic UI made from html,css and java script
 
 ## Corner and edge Cases that are to be avoided-
-1. Directely accessing the API link, which in turn inputs no data in the API. This breaks it and is to be avoided right now.
+1. Directly accessing the API link, which in turn inputs no data in the API. This breaks it and is to be avoided right now.
 2. Trying to process files that do not contain their bitrate causes the API to crash.
