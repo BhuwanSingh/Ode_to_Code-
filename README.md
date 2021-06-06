@@ -9,8 +9,15 @@
 The Speech to Text service uses google's speech regognition abilities to convert speech into text.The transcription of incoming audio is sent back to the client with minimal delay. The service is accessed via Heroku interface; a REST HTTP interface is also available.
 
 ## API GENERATE
+# https://voice-recog-app.herokuapp.com/api
 API is the acronym for Application Programming Interface, which is a software intermediary that allows two applications to talk to each other. Each time we use an app like Facebook, send an instant message, or check the weather on our phone, we’re using an API.
 We used INSOMNIA to create,design the API based on index.js,express and used the free hosting abilities of Heroku to generate our API.
+
+# INPUT 
+Audio in the form of base64 encoded jason file
+# Output
+![image](https://user-images.githubusercontent.com/63011793/120913767-27901180-c6b7-11eb-95f6-4af41f11ced1.png)
+
 
 ## SPEECH RECOGNITION
 For this purpose we used the python libraries like speech recognition,librosa,json,base64,soundfile etc.This here take your voice in base64 encoding or live audio and converts it into normal string.
