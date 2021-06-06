@@ -20,7 +20,9 @@
   "dependencies": {
     "axios": "^0.21.1",
     "express": "^4.17.1",
-    "python-shell": "^3.0.0"
+    "netlify-lambda": "^2.0.8",
+    "python-shell": "^3.0.0",
+    "serverless-http": "^2.7.0"
   },
   "engines": {
     "node": "16.2.0"

@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+// const router = express.Router();
 const fs = require("fs");
 const PythonShell = require("python-shell").PythonShell;
 
@@ -31,3 +32,5 @@ let port = process.env.PORT || 3001;
 app.listen(port, () => {
     console.log(`listining on port:${port}`);
 });
+
+// app.use("/.netlify/functions/api" , router);
